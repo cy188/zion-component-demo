@@ -1,3 +1,10 @@
+<template>
+  <div class="container">
+    <h1>this is a Vue3 Component</h1>
+    <div>message from outer scope: {{ value || "no input" }}</div>
+    <input @input="onInput" />
+  </div>
+</template>
 
 <script setup lang="ts">
 const props = defineProps<{
@@ -13,14 +20,6 @@ function onInput(e: Event) {
   });
 }
 </script>
-
-<template>
-  <div class="container">
-    <h1>this is a Vue3 Component</h1>
-    <div>message from outer scope: {{ value || "no input" }}</div>
-    <input @input="onInput" />
-  </div>
-</template>
 
 <style>
 .container {
