@@ -7,6 +7,7 @@
 </template>
 
 <script setup lang="ts">
+
 const props = defineProps<{
   globalData: Record<string, any>;
   setGlobalData: (newValue: any) => void;
@@ -19,6 +20,9 @@ function onInput(e: Event) {
     message: (e.target as HTMLInputElement)?.value,
   });
 }
+
+
+
 </script>
 
 <style>
